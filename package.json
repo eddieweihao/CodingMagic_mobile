@@ -1,0 +1,32 @@
+{
+  "name": "codingmagic",
+  "version": "1.0.0",
+  "description": "mobile web",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steinwh/CodingMagic_mobile.git"
+  },
+  "author": "stein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steinwh/CodingMagic_mobile/issues"
+  },
+  "homepage": "https://github.com/steinwh/CodingMagic_mobile#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-concat": "^2.6.0",
+    "http-server": "^0.9.0",
+    "browser-sync": "^2.14.0"
+  }
+}

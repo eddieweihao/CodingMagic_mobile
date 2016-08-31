@@ -1,11 +1,44 @@
 ---
-layout: default
 title: CodingMagic
 ---
-<h2>{{ page.title }}</h2>
-<p>news</p>
-<ul>
-    {% for post in site.posts %}
-    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--文章列表页-->
+    <div data-role="page" id="bloglist">
+        <div data-role="header">
+            <h2>{{ page.title }}</h2>
+        </div>
+        <div data-role="content">
+            <p>Blog list</p>
+            <ul>
+                {% for post in site.posts %}
+                <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div data-role="footer">
+            <h4>Copyright Megacorp &copy; CodingMagic</h4>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
+</body>
+
+</html>
+
+
