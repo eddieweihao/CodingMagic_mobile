@@ -6,7 +6,8 @@ title: CodingMagic
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title></title>
+
+    <title>CodingMagic</title>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/css/jquery.mobile-1.4.5.min.css"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
@@ -16,19 +17,72 @@ title: CodingMagic
 </head>
 
 <body>
+    <!--首页-->
+    <div data-role="page" id="homepage" data-add-back-btn="true">
 
-    <!--文章列表页-->
-    <div data-role="page" id="bloglist">
+        <!--菜单面板-->
+        <div data-role="panel" id="leftPanel">
+            <ul data-role="listview" data-inset="true">
+                <li><a data-role="button" data-rel="close" data-icon="home">Home Page</a></li>
+                <li><a data-role="button" href="#mycv" data-icon="user">My CV</a></li>
+                <li><a data-role="button" href="#bloglist" data-icon="grid">Blog List</a></li>
+                <li><a data-role="button" href="#projectlist" data-icon="cloud">Project List</a></li>
+                <li><a data-role="button" href="#aboutus" data-icon="gear">About Us</a></li>
+
+            </ul>
+
+            <p>
+                <a data-role="button" data-rel="close" data-icon="delete">Close</a>
+            </p>
+        </div>
+
         <div data-role="header">
-            <h2>{{ page.title }}</h2>
+            <a href="#leftPanel" data-icon="bullets">Menu</a>
+            <h2>Home Page</h2>
+            <a href="#homepage" class="ui-btn-right" data-icon="home">Home</a>
         </div>
         <div data-role="content">
-            <p>Blog list</p>
-            <ul>
+
+        </div>
+        <div data-role="footer">
+            <h4>Copyright &copy; CodingMagic</h4>
+        </div>
+    </div>
+
+    <!--文章列表页-->
+    <div data-role="page" id="bloglist" data-add-back-btn="true">
+        <div data-role="header">
+            <h2>Blog List</h2>
+            <a href="#homepage" class="ui-btn-right" data-icon="home">Home</a>
+        </div>
+        <div data-role="content">
+            <p>Recent blog</p>
+            <ul data-role="listview" data-inset="true" data-filter="true">
                 {% for post in site.posts %}
-                <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}&nbsp;-{{ post.date | date_to_string }}</a></li>
                 {% endfor %}
             </ul>
+
+            <!--<ul>-->
+                <!--{% for post in site.posts %}-->
+                <!--<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>-->
+                <!--{% endfor %}-->
+            <!--</ul>-->
+
+        </div>
+        <div data-role="footer">
+            <h4>Copyright &copy; CodingMagic</h4>
+        </div>
+    </div>
+
+    <!--模版页-->
+    <div data-role="page" id="" data-add-back-btn="true">
+        <div data-role="header">
+            <h2></h2>
+            <a href="#homepage" class="ui-btn-right" data-icon="home">Home</a>
+        </div>
+        <div data-role="content">
+
         </div>
         <div data-role="footer">
             <h4>Copyright &copy; CodingMagic</h4>

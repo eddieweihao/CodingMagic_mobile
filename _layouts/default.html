@@ -16,9 +16,10 @@
 <body>
 
     <!--文章内容页-->
-    <div data-role="page" id="blogcontent">
+    <div data-role="page" id="blogcontent" data-add-back-btn="true">
         <div data-role="header">
-            <h2>{{ page.title }}</h2>
+            <h2>Blog Content</h2>
+            <a href="{{ site.baseurl }}" class="ui-btn-right" data-icon="home">Home</a>
         </div>
         <div data-role="content">
             {{ content }}
